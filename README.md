@@ -1,13 +1,5 @@
 # Cloud Engine
-University of Auckland 2023 Semester 2 (CompSci 399) <br>
-Cloud Engine (Team 16) with Project 7
-
-**Project Timeline on Jira**:
-<br>
-[Visit Cloud Engine JIRA board](https://aucklanduni-smin289.atlassian.net/jira/software/projects/T16/boards/2)
-
-![JIRA Image](/frontend/public/images/jira.png)
-<br><br>
+University of Auckland 2023 
 
 ## What is Cloud Engine?
 Cloud Engine is a cloud management platform that allows users to manage their cloud resources from different cloud providers in one place. It provides a user-friendly interface for users to manage their cloud resources, such as creating, deleting, and updating cloud resources. It also provides a dashboard for users to monitor their cloud resources.
