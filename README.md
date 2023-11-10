@@ -177,7 +177,7 @@ To install Cloud Engine backend server,
 1. Clone the repository:
     
     ```bash
-    git clone https://github.com/uoa-compsci399-s2-2023/capstone-project-team-16.git
+    git clone https://github.com/sgtkiwi/cloud-engine.git
     ```
     
 2. Navigate into the backend directory:
@@ -247,7 +247,7 @@ Cloud Engine has been deployed online using a free deployment service,
 ### Deployment Repository
 [Backend ONLY](https://github.com/521minsu/cloud-engine) <br>
 [MONOREPO](https://github.com/521minsu/cloud-engine2) <br>
-  *NOTE*: Only members of Team 16 may access these repositories.
+
 
 ### Deployed URL
 *NOTE*: It is a deployment version of the website that is not completely finished, so we will be deploying again later. 
@@ -274,7 +274,6 @@ For more information on backend routes to access server [API Reference ](https:/
 <br><br>
 
 To request for more endpoints, please add on Google Docs ([LINK](https://docs.google.com/document/d/17WN8Kc6bYWCzGtmIO2jYf97FsPnhibPQsApwhysLr5o/edit)), following the template convention on the top of the document. <br>
-  Note: Only members of Team 16 may access this document via university ID. 
 
 
 [Javascript.js]: https://img.shields.io/badge/javascript-000000?style=for-the-badge&logo=javascript
