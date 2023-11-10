@@ -1,0 +1,7 @@
+node_modules
+backend/.env
+
+.DS_Store
+.DS_Store
+.DS_Store
+backend/routes/GCP/key.json

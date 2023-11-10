@@ -1,0 +1,489 @@
+{% extends 'template/index.html' %}
+
+{% block content %}
+
+
+<!-- Vendor CSS Files -->
+<link href="../aboutUs2/assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+<link href="../aboutUs2/assets/vendor/aos/aos.css" rel="stylesheet">
+<link href="../aboutUs2/assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+<link href="../aboutUs2/assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+<!-- Template Main CSS File -->
+<link href="../aboutUs2/assets/css/aboutUs2.css" rel="stylesheet">
+
+<!-- navbar gap -->
+<style>
+
+    .error-msg {
+        color: red;
+    }
+
+    .sent-msg {
+        color: green;
+    }
+
+    .loading-msg {
+        color: #deb316;
+    }
+
+    .error-msg,
+    .sent-msg,
+    .loading-msg {
+        font-size: 1rem;
+        font-weight: 600;
+        margin-left: 2%;
+        text-align: center;
+    }
+
+    .message-container {
+        height: 40px;
+        overflow: hidden;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    textarea[type="request"] {
+        border-radius: 5px !important;
+        background-color: #f6f6f6;
+    }
+</style>
+
+
+<!-- This code block displays an image in a div element. The image source is located in the "../selection/images" directory and is named "Screenshot 2023-10-19 at 5.36.05 AM.png". The image is set to be 100% of the width of its container and has the class "img-fluid" for responsive design. -->
+<div>
+    <img src="../selection/images/Screenshot 2023-10-19 at 5.36.05 AM.png" width=100% class="img-fluid" alt="Responsive image">
+</div>
+
+<!-- ======= About Us Section ======= -->
+<section id="about" class="about">
+
+    <!-- This code block creates a breadcrumb navigation bar with a dark and transparent background. It contains two list items, the first one being a home icon that links to the homepage and the second one being a link to the "About Us" page with an underline style. -->
+    <ol class="breadcrumb breadcrumb-dark breadcrumb-transparent" style="margin-left: 14%; margin-bottom: 5%;">
+        <li class="breadcrumb-item"">
+            <a href=" /">
+            <i class="fa-solid fa-house" style="color: rgb(70, 70, 70) !important;"></i>
+            </a>
+        </li>
+        <li class="breadcrumb-item active" aria-current="page">
+            <a href="/aboutUs2" style="text-decoration: underline;">About Us</a>
+        </li>
+    </ol>
+
+
+    <div class="container" data-aos="fade-up">
+
+        <!-- This code block represents the section header of the "About Us" page. It contains a title and a brief description of the cloud computing services provided by the University of Auckland. -->
+        <div class="section-header" style="margin-bottom: 3%;">
+            <h2>About Us</h2>
+            <p>It is the innovation, leap, and new start and challenge of cloud computing services. <br>
+                All services are provided by the University of Auckland.</p>
+        </div>
+
+        
+        
+        <!-- This HTML code block contains the About Us section of the Cloud Engine website. It includes a brief introduction of the team and the purpose of the website, as well as a description of the services offered by AWS, Google Cloud, and Azure. The code also includes images and links to external resources. -->
+        <div class="row gy-4">
+            <div class="col-lg-6">
+                <h3>How did our journey begin?</h3>
+                <a
+                    href="https://www.google.com/maps/place/The+University+of+Auckland/@-36.8486795,174.7469116,13.6z/data=!4m6!3m5!1s0x6d0d47e383f32253:0xbd49f61f758a9e5b!8m2!3d-36.8519361!4d174.7689482!16zL20vMDFwajQ4?entry=ttu">
+                    <img src="../images/Screenshot 2023-10-09 at 5.42.17 AM.png" class="img-fluid rounded-4 mb-4"
+                        alt="">
+                </a>
+                <p>Our team is designed to provide more detailed explanations of the service to those who want to use
+                    cloud computing services, and to recommend and provide reasonable services to beginners who are not
+                    familiar with cloud services.
+                    Our cloud engine can help you make a smarter choice.</p>
+                <p>"Cloud Engine" is designed to deploy some of the services offered by AWS, Google Cloud, and Azure,
+                    which are world-renowned cloud service providers. We want to combine the advantages of these three
+                    large providers to provide the best user experience. In the future, we continue to add new features
+                    and other cloud providers' beneficial features to grow
+                    into a comprehensive platform where users can manage all the cloud resources they need in one place.
+                </p>
+            </div>
+            <div class="col-lg-6">
+                <div class="content ps-0 ps-lg-5">
+                    <p class="fst-italic" style="font-weight: bold; font-size: large;">
+                        Our Team Introduction and Purpose.
+                    </p>
+                    <ul>
+                        <li><i class="bi bi-check-circle-fill"></i> Cloud Engine is a website that helps you easily and
+                            conveniently use cloud computing.</li>
+                        <li><i class="bi bi-check-circle-fill"></i> Our main goal is to make it easy for users
+                            unfamiliar with cloud services to understand and utilize them through detailed descriptions
+                            of each service.</li>
+                        <li><i class="bi bi-check-circle-fill"></i> Our goal is to provide the convenience of not having
+                            users compare multiple places by selecting the best service from a variety of service
+                            providers.</li>
+                    </ul>
+                    <p>
+                        Cloud computing is an irresistible trend in the current IT market, but its complexity is causing
+                        many people to hesitate to face the barriers.</p> <p style="font-weight: bold;">The "cloud engine" provides these users with a way
+                        to reduce the complexity of cloud computing and to easily understand and utilize various
+                        services.</p><p> This will allow more people to benefit from cloud technology and effectively integrate
+                        cloud computing,
+                        a key component of digital transformation, into their daily lives and businesses.
+                        Cloud Engine helps you better understand and access the resources and services you need in cloud
+                        computing environments. This saves individual users and organizations time and money, creating
+                        an environment where they can focus on their business or projects without complexity.
+                    </p>
+
+                    <div class="position-relative mt-4">
+                        <img src="assets/img/ourteam.png" class="img-fluid rounded-4" alt="">
+                        <a href="https://www.youtube.com/watch?v=1za_1FIeF38" class="glightbox play-btn"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section><!-- End About Us Section -->
+
+<!-- ======= Our Team Section ======= -->
+<!--
+This section displays the team members of the project along with their photos and contact information. The section contains a header with the title "Our Team" and a brief description of the team. The team members are displayed in a row with their respective roles and social media links. The section is responsive and uses the AOS library for animations.
+-->
+<section id="team" class="team">
+    <div class="container" data-aos="fade-up">
+
+        <div class="section-header">
+            <h2>Our Team</h2>
+            <p>Photos and contact information of our team members are provided. Please contact us if you have any
+                questions.</p>
+        </div>
+
+        <div class="row gy-4">
+
+            <div class="col-xl-4 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="100">
+                <div class="member">
+                    <div style="padding: 30px 50px">
+                        <img src="../images/han.png" class="img-fluid" alt="" width="350px">
+                    </div>
+                    <h4>JunHee Han</h4>
+                    <span>Head Back-End Developer</span>
+                    <div class="social">
+                        <a href=""><i class="bi bi-twitter"></i></a>
+                        <a href=""><i class="bi bi-facebook"></i></a>
+                        <a href=""><i class="bi bi-instagram"></i></a>
+                        <a href=""><i class="bi bi-linkedin"></i></a>
+                    </div>
+                </div>
+            </div><!-- End Team Member -->
+
+            <div class="col-xl-4 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="200">
+                <div class="member">
+                    <div style="padding: 30px 50px">
+                        <img src="../images/shin.png" class="img-fluid" alt="" width="350px">
+                    </div>
+                    <h4>Shinbeom Kwon</h4>
+                    <span>Front-End Developer</span>
+                    <div class="social">
+                        <a href=""><i class="bi bi-twitter"></i></a>
+                        <a href=""><i class="bi bi-facebook"></i></a>
+                        <a href=""><i class="bi bi-instagram"></i></a>
+                        <a href=""><i class="bi bi-linkedin"></i></a>
+                    </div>
+                </div>
+            </div><!-- End Team Member -->
+
+            <div class="col-xl-4 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="300">
+                <div class="member">
+                    <div style="padding: 30px 50px">
+                        <img src="../images/min.png" class="img-fluid" alt="" width="350px">
+                    </div>
+                    <h4>Sangjun Min</h4>
+                    <span>Head Front-End Developer</span>
+                    <div class="social">
+                        <a href="https://www.facebook.com/rold.min/"><i class="bi bi-facebook"></i></a>
+                        <a href="https://www.instagram.com/haroldmin_/"><i class="bi bi-instagram"></i></a>
+                        <a href="https://www.linkedin.com/feed/"><i class="bi bi-linkedin"></i></a>
+                        <a href=""><i class="bi bi-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            
+            <!-- This code block displays a team member's information, including their name, role, and social media links. It also includes an image of the team member. -->
+            <div class="col-xl-4 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="300">
+                <div class="member">
+                    <div style="padding: 30px 50px">
+                        <img src="../images/tan.png" class="img-fluid" alt="" width="350px">
+                    </div>
+                    <h4>Tanvi Kher</h4>
+                    <span>Team Leader</span>
+                    <div class="social">
+                        <a href="https://www.facebook.com/tanvi.kher.92?mibextid=LQQJ4d"><i
+                                class="bi bi-facebook"></i></a>
+                        <a href="https://instagram.com/tanzzz.k?igshid=OGQ5ZDc2ODk2ZA=="><i
+                                class="bi bi-instagram"></i></a>
+                        <a
+                            href="https://www.linkedin.com/in/tanvi-kher-94b451238?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app?"><i
+                                class="bi bi-linkedin"></i></a>
+                        <a href=""><i class="bi bi-twitter" aria-disabled=""></i></a>
+                    </div>
+                </div>
+            </div><!-- End Team Member -->
+
+            
+            <!-- This code block represents a section of the "About Us" page of a website. It displays information about a back-end developer named Minsu Kim, including their profile picture, name, job title, and links to their Instagram and LinkedIn profiles. -->
+            <div class="col-xl-4 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="400">
+                <div class="member">
+                    <div style="padding: 30px 50px">
+                        <img src="../images/kim.png" class="img-fluid" alt="" width="350px">
+                    </div>
+                    <h4>Minsu Kim</h4>
+                    <span>Back-End Developer</span>
+                    <div class="social">
+                        <a href="https://instagram.com/521minsu?igshid=OGQ5ZDc2ODk2ZA=="><i
+                                class="bi bi-instagram"></i></a>
+                        <a href="https://www.linkedin.com/in/521minsu/"><i class="bi bi-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section><!-- End Our Team Section -->
+
+
+
+<!-- ======= Contact Section ======= -->
+
+<!-- This section contains the contact information and form for users to submit their requests. It includes the location, email, phone number, and open hours of the organization. The form includes fields for name, email, subject, and message. Upon submission, the form triggers the contactUs() function. -->
+<section id="contact" class="contact">
+    <!-- ... -->
+</section><!-- End Contact Section -->
+<section id="contact" class="contact">
+    <div class="container" data-aos="fade-up">
+
+        <div class="section-header">
+            <h2>Contact Us</h2>
+            <p>We are always here for you.</p>
+        </div>
+
+        <div class="row gx-lg-0 gy-4">
+
+            <div class="col-lg-4">
+
+                <div class="info-container d-flex flex-column align-items-center justify-content-center myfontcolor">
+                    <div class="info-item d-flex">
+                        <i class="bi bi-geo-alt flex-shrink-0"></i>
+                        <div>
+                            <h4>Location:</h4>
+                            <p style="font-size: 14px;">The University of Auckland</p>
+                            <!-- <p style="font-size: 14px;">The University of Auckland, 34 Princes Street, Auckland CBD, Auckland 1010</p> -->
+                        </div>
+                    </div><!-- End Info Item -->
+
+                    <div class="info-item d-flex">
+                        <i class="bi bi-envelope flex-shrink-0"></i>
+                        <div>
+                            <h4>Email:</h4>
+                            <p style="font-size: 14px;">g.weber@auckland.ac.nz</p>
+                        </div>
+                    </div><!-- End Info Item -->
+
+                    <div class="info-item d-flex">
+                        <i class="bi bi-phone flex-shrink-0"></i>
+                        <div>
+                            <h4>Call:</h4>
+                            <p style="font-size: 14px;">+64 9 373 7513</p>
+                        </div>
+                    </div><!-- End Info Item -->
+
+                    <div class="info-item d-flex">
+                        <i class="bi bi-clock flex-shrink-0"></i>
+                        <div>
+                            <h4>Open Hours:</h4>
+                            <p style="font-size: 14px;">Mon-Fri: 8AM - 5PM</p>
+                        </div>
+                    </div><!-- End Info Item -->
+                </div>
+
+            </div>
+
+            
+            <!--
+            This code block contains a contact form with input fields for name, email, subject, and message.
+            The form also includes a message container with three different messages that are displayed based on the status of the form submission (error, sent, or loading). The submit button calls the "contactUs()" function when clicked.
+            -->
+            <div class="col-lg-8">
+                <form class="php-email-form">
+                    <div class="row">
+                        <div class="col-md-6 form-group">
+                            <input type="text" name="name" class="form-control" id="name" placeholder="Your Name"
+                                required>
+                        </div>
+                        <div class="col-md-6 form-group mt-3 mt-md-0">
+                            <input type="email" class="form-control" name="email" id="email" placeholder="Your Email"
+                                required>
+                        </div>
+                    </div>
+                    <div class="form-group mt-3">
+                        <input type="text" class="form-control" name="subject" id="subject" placeholder="Title"
+                            required>
+                    </div>
+                    <div class="form-group mt-3">
+                        <textarea type="request" class="form-control" name="message" id="message" rows="7"
+                            placeholder="Your request..." style="resize: none; height: 15vh;" required></textarea>
+                    </div>
+                    <div class="my-3 message-container">
+                        <div class="error-msg" style="display: none;">Oops..! Something went wrong.</div>
+                        <div class="sent-msg" style="display: none;">Thank you for your request! <i
+                                class="fa fa-envelope" aria-hidden="true"></i></div>
+                        <div class="loading-msg" style="display: none;">Your request is on the way . . . <i
+                                class="fa fa-paper-plane" aria-hidden="true"></i></div>
+                    </div>
+                    <div class="text-center">
+                        <button type="submit" onclick="contactUs()"
+                            style="border-radius: 10px !important; font-weight: bold !important; font-size: 16px !important;">Submit</button>
+                    </div>
+                </form>
+            </div><!-- End Contact Form -->
+
+        </div>
+
+    </div>
+</section><!-- End Contact Section -->
+
+
+
+<!-- =====================================================================================
+    ======================================================================================
+    ====================================================================================== -->
+
+
+
+<!-- Vendor JS Files -->
+<script src="../aboutUs2/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="../aboutUs2/assets/vendor/aos/aos.js"></script>
+<script src="../aboutUs2/assets/vendor/glightbox/js/glightbox.min.js"></script>
+<script src="../aboutUs2/assets/vendor/purecounter/purecounter_vanilla.js"></script>
+<script src="../aboutUs2/assets/vendor/swiper/swiper-bundle.min.js"></script>
+<script src="../aboutUs2/assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+<!-- Import fa icon -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    integrity="sha384-mQ93GR66B00ZXjt0YO5KlohRA5SY2XofGJYq2INjjz9qI2aAz9L3PcYBkutelTf" crossorigin="anonymous">
+<!-- Template Main JS File -->
+<script src="../aboutUs2/assets/js/main.js"></script>
+
+<!-- 
+This script defines an async function named "contactUs" that sends an email to the server using the email input value. It also handles the response from the server and displays appropriate messages based on the response status.
+
+The function performs the following steps:
+1. Prevents the default form submission behavior.
+2. Defines the API URL and gets the email input value.
+3. Defines the email data object and selects the error, sent, and loading messages.
+4. Displays the loading message.
+5. Sends a POST request to the server with the email data.
+6. Checks the input and email validation and displays the error message if necessary.
+7. Displays the sent message if the response status is 404.
+8. Displays the error message if the response status is not 404.
+
+-->
+<script>
+    async function contactUs() {
+
+        event.preventDefault();
+
+        const apiUrl = 'http://localhost:3001';
+        const emailInput = document.getElementById('email');
+        const email = emailInput.value;
+        const emailData = {
+            email: email,
+        }
+        const errormsg = document.querySelector('.error-msg');
+        const sentmsg = document.querySelector('.sent-msg');
+        const loadingmsg = document.querySelector('.loading-msg');
+
+        loadingmsg.style.display = 'block';
+
+        const response = await fetch(`${apiUrl}/api/autoreply`, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                'Accept': 'application/json'
+            },
+            body: JSON.stringify(emailData)
+        })
+            .then(data => {
+                if (checkInputs() == false) {
+                    loadingmsg.style.display = 'none';
+                    errormsg.style.display = 'block';
+                    sentmsg.style.display = 'none';
+                    setTimeout(function () {
+                        errormsg.style.display = 'none';
+                    }, 1500);
+                }
+                else if (validateEmail() == false) {
+                    loadingmsg.style.display = 'none';
+                    errormsg.style.display = 'block';
+                    sentmsg.style.display = 'none';
+                    setTimeout(function () {
+                        errormsg.style.display = 'none';
+                    }, 1500);
+                }
+
+                else if (data.status == 404) {
+                    loadingmsg.style.display = 'none';
+                    errormsg.style.display = 'none';
+                    sentmsg.style.display = 'block';
+                    setTimeout(function () {
+                        location.reload();
+                    }, 1000);
+                } else {
+                    loadingmsg.style.display = 'none';
+                    errormsg.style.display = 'block';
+                    sentmsg.style.display = 'none';
+                    setTimeout(function () {
+                        errormsg.style.display = 'none';
+                    }, 1500);
+                }
+            })
+            .catch(err => {
+                console.log(err);
+            });
+    }
+</script>
+
+<!-- 
+This script defines a function named "validateEmail" that validates the email input field in the HTML document. 
+If the email is not valid, an alert message will be displayed and the function will return false.
+-->
+<script>
+    function validateEmail() {
+        var emailInput = document.getElementById('email');
+
+        var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]{3}$/;
+
+        if (!emailRegex.test(emailInput.value)) {
+            alert("Please enter a valid email address.");
+            return false;
+        }
+    }
+</script>
+
+<!-- This script defines a function named checkInputs() that checks if the input fields in a form with ids 'name', 'email', 'subject', and 'message' are filled. If any of the fields are empty, an alert message is displayed and the function returns false. Otherwise, the function returns true. -->
+<script>
+    function checkInputs() {
+        const name = document.getElementById('name').value;
+        const email = document.getElementById('email').value;
+        const subject = document.getElementById('subject').value;
+        const message = document.getElementById('message').value;
+
+        requiredInputs = [name, email, subject, message];
+        console.log(requiredInputs);
+
+        for (let i = 0; i < requiredInputs.length; i++) {
+            if (requiredInputs[i] == "") {
+                alert("Please fill in the form.");
+                return false;
+            }
+        }
+        return true;
+    } 
+</script>
+
+
+{% endblock %}

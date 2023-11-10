@@ -1,0 +1,133 @@
+{% extends 'template/index_blank.html' %}
+
+{% block content %}
+
+<style>
+    .forgot:hover {
+        text-decoration: underline !important;
+    }
+
+    .createAcc:hover {
+        text-decoration: underline !important;
+    }
+
+    body {
+        background-image: url("../images/card.jpeg");
+        background-size: 100% auto;
+        background-position: top;
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        overflow: hidden !important;
+        padding: 0 !important;
+    }
+</style>
+
+<!-- background img -->
+<!-- <div class="col-lg-5 auth-banner"></div> -->
+
+<!-- 
+This HTML code block represents the login page of a web application. It contains a form for users to input their email and password, and a "Continue" button to submit the form. The page also includes options for users to reset their password or create a new account. Additionally, there are buttons for users to sign in using their Google or Apple accounts. 
+
+The page includes a welcome message and an error popup that will display relevant messages to the user. 
+
+The HTML code is styled using Bootstrap classes for responsive design. 
+-->
+<div class="container-fluid" style="margin-top: 8%; margin-bottom: 5%; margin-left: 7.5%;">
+    <div class="row  align-items-center justify-content-end">
+        <div class="col-lg-7">
+            <div class="row">
+                <div class="col-md-10 login-container my-3">
+
+                    <h1 style="font-weight: 600 !important; margin-bottom: 20%; margin-top: 10%;">Sign in</h1>
+
+                    <!-- Welcome message -->
+                    <div class="d-grid gap-3 d-flex justify-content-center auth-sub-normal">
+                        <p class="auth-subheading" id="login-msg">Initialising...</p>
+                    </div>
+
+                    <!-- Error Popup -->
+                    <div class="d-grid d-flex justify-content-center auth-sub-warning" id="login-err-popup">
+                        <div
+                            class="d-grid gap-3 d-flex justify-content-center auth-sub-warning bg-danger-subtle m-3 p-3 rounded-4">
+                            <img src="../auth/images/icon-minus.png" alt="ERROR" class="my-auto auth-warning-icon">
+                            <p class="auth-warning-text my-auto text-center" id="login-err-msg">Initialising...</p>
+                        </div>
+                    </div>
+
+                    <!-- 
+
+                    This is a login form that allows users to enter their email and password to log in to the website. It also provides options for users to log in using their Google or Apple accounts. If the user forgets their password, they can click on the "Forgot your password?" link to reset it. If the user does not have an account, they can click on the "Create an account" link to sign up. 
+
+                    The form contains the following elements:
+                    - Email input field
+                    - Password input field
+                    - "Forgot your password?" link
+                    - "Continue" button
+                    - Google login button
+                    - Apple login button
+                    - "Create an account" link
+                    -->
+                    <form id="loginForm">
+                        <div class="form-floating mb-3">
+                            <input type="email" class="form-control" id="emailInput"
+                                placeholder="username@example.com" name="email"
+                                style="border-top: none; border-left: none; border-right: none; border-bottom: 1px solid rgba(128, 128, 128, 0.5); border-radius: 0px;">
+                            <label for="login-email" style="color: rgba(46, 46, 46, 0.5);">Email address</label>
+                        </div>
+                        <div class="form-floating">
+                            <input type="password" class="form-control" id="passwordInput" placeholder="Password"
+                                name="password"
+                                style="border-top: none; border-left: none; border-right: none; border-bottom: 1px solid rgba(128, 128, 128, 0.5); border-radius: 0px;">
+                            <label for="login-password" style="color: rgb(46, 46, 46, 0.5);">Password</label>
+                            <!-- <span id="passwordHelpInline" class="form-text">
+                            Must be 8-20 characters long.
+                        </span> -->
+                            <div class="d-grid d-md-flex justify-content-end">
+                                <a class="forgot" href="forgot"
+                                    style="color:rgba(0, 0, 255, 0.8); text-decoration: none;"><br>Forgot
+                                    your password?</a>
+                            </div>
+
+                        </div>
+
+                        <div class="d-grid py-4 justify-content-end" style="padding: 50px 0px 30px 0px !important;">
+                            <button class="btn btn-warning orange-button" type="submit" id="route">Continue</button>
+                        </div>
+
+
+                        <div class="divider-container py-4">
+                            <div class="divider-line"></div>
+                            <div class="divider-text">OR</div>
+                            <div class="divider-line"></div>
+                        </div>
+
+                        <div class="d-grid gap-3 d-flex justify-content-center">
+                            <a class="btn btn-outline-primary auth-sso-btn" type="button"><img
+                                    src="../auth/images/icon-google.png" style="width:30px; height:30px;"
+                                    alt="Google"></a>
+                            <a class="btn btn-outline-primary auth-sso-btn" type="button"><img
+                                    src="../auth/images/icon-apple.png" style="width:30px; height:30px;"
+                                    alt="Apple"></a>
+                        </div>
+
+
+                        <div class="d-grid gap-3 d-flex justify-content-center pt-5" style="margin-bottom: 15%;">
+                            <p>Don't have an account? </p>
+                            <a class="createAcc" href="signup"
+                                style="color:rgba(0, 0, 255, 0.8); text-decoration: none;">Create an
+                                account</a>
+                        </div>
+
+                    </form>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<script src="../auth/scripts/login.js" defer="true"></script>
+
+
+{% endblock %}

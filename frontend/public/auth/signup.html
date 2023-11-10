@@ -1,0 +1,219 @@
+{% extends 'template/index_blank.html' %}
+
+{% block content %}
+
+<style>
+    .forgot:hover {
+        text-decoration: underline !important;
+    }
+
+    .createAcc:hover {
+        text-decoration: underline !important;
+    }
+
+    body {
+        background-image: url("../images/card.jpeg");
+        background-size: 100% auto;
+        background-position: top;
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        overflow: hidden !important;
+        padding: 0 !important;
+    }
+</style>
+
+<!-- 
+This HTML code represents the sign up page for a web application. 
+It contains a form for the user to enter their first name, last name, and email address. 
+The form also includes buttons for the user to sign up with their Google or Apple account. 
+There is also a link for users who do not have an account to create one. 
+The code includes placeholders for error messages and a welcome message. 
+-->
+<div class="container-fluid" style="margin-top: 8%; margin-bottom: 5%; margin-left: 7.5%;">
+    <div class="row  align-items-center justify-content-center">
+        <div class="col-lg-5">
+        </div>
+        <div class="col-lg-7">
+            <div class="row">
+                <div class="col-md-10 login-container mt-2">
+
+                    <h1 style="font-weight: 600 !important; margin-bottom: 20%; margin-top: 10%;">Sign Up</h1>
+
+                    <!-- Welcome message -->
+                    <!-- 
+                    This code block contains HTML code for the signup page of the authentication system. It includes a div element with a class of "d-grid gap-3 d-flex justify-content-center auth-sub-normal my-5" that 
+                    contains a paragraph element with a class of "auth-subheading" and an id of "signup-msg". 
+                    It also includes a div element with a class of "d-grid d-flex justify-content-center auth-sub-warning" and an id of "signup-err-popup" that contains another div element with a class of "d-grid gap-3 d-flex justify-content-center auth-sub-warning bg-danger-subtle m-3 p-3 rounded-4". 
+                    This div element contains an image element with a source of "../auth/images/icon-minus.png" and a class of "my-auto auth-warning-icon", as well as a paragraph element with a class of "auth-warning-text" and an id of "signup-err-msg". 
+                    This code block is used to display error messages to the user during the signup process.
+                    -->
+                    <div class="d-grid gap-3 d-flex justify-content-center auth-sub-normal my-5">
+                        <p class="auth-subheading" id="signup-msg">Initialising...</p>
+                    </div>
+
+                    <!-- Error Popup -->
+                    <div class="d-grid d-flex justify-content-center auth-sub-warning" id="signup-err-popup">
+                        <div
+                            class="d-grid gap-3 d-flex justify-content-center auth-sub-warning bg-danger-subtle m-3 p-3 rounded-4">
+                            <!-- <div class="d-grid d-flex justify-content-center"> -->
+                            <img src="../auth/images/icon-minus.png" alt="ERROR" class="my-auto auth-warning-icon">
+                            <!-- </div> -->
+                            <p class="auth-warning-text my-auto" id="signup-err-msg">Initialising...</p>
+                        </div>
+                    </div>
+
+                    <!-- Sign up first step (name, email) Form -->
+                    <div class="signup-otp-form" id="signup-otpView">
+                        <form id="signup-otpForm">
+                            <div class="form-floating mb-4">
+                                <input type="text" class="form-control" id="signup-otp-firstname"
+                                    placeholder="First Name" name="firstName"
+                                    style="border-top: none; border-left: none; border-right: none; border-bottom: 1px solid rgba(128, 128, 128, 0.5); border-radius: 0px;">
+                                <label for="signup-otp-firstname" style="color: rgba(46, 46, 46, 0.5);">First
+                                    Name</label>
+                            </div>
+                            <div class="form-floating mb-4">
+                                <input type="text" class="form-control" id="signup-otp-lastname" placeholder="Last Name"
+                                    name="lastName"
+                                    style="border-top: none; border-left: none; border-right: none; border-bottom: 1px solid rgba(128, 128, 128, 0.5); border-radius: 0px;">
+                                <label for="signup-otp-lastname" style="color: rgba(46, 46, 46, 0.5);">Last Name</label>
+                            </div>
+                            <div class="form-floating mb-4">
+                                <input type="email" class="form-control" id="signup-otp-email"
+                                    placeholder="username@example.com" name="email"
+                                    style="border-top: none; border-left: none; border-right: none; border-bottom: 1px solid rgba(128, 128, 128, 0.5); border-radius: 0px;">
+                                <label for="signup-otp-email" style="color: rgba(46, 46, 46, 0.5);">Email</label>
+                            </div>
+
+                            <div class="d-grid py-4 justify-content-end" style="padding: 10px 0px 30px 0px !important;">
+                                <button class="btn btn-warning orange-button" type="submit" id="route"> Next </button>
+                            </div>
+
+
+                            <div class="divider-container py-4">
+                                <div class="divider-line"></div>
+                                <div class="divider-text">OR</div>
+                                <div class="divider-line"></div>
+                            </div>
+
+                            <div class="d-grid gap-3 d-flex justify-content-center">
+                                <a class="btn btn-outline-primary auth-sso-btn" type="button"><img
+                                        src="../auth/images/icon-google.png" style="width:30px; height:30px;"
+                                        alt="Google"></a>
+                                <a class="btn btn-outline-primary auth-sso-btn" type="button"><img
+                                        src="../auth/images/icon-apple.png" style="width:30px; height:30px;"
+                                        alt="Apple"></a>
+                            </div>
+
+
+                            <div class="d-grid gap-3 d-flex justify-content-center pt-5" style="margin-bottom: 15%;">
+                                <p>Don't have an account? </p>
+                                <a class="createAcc" href="signup"
+                                    style="color:rgba(0, 0, 255, 0.8); text-decoration: none;">Create an
+                                    account</a>
+                            </div>
+
+                        </form>
+                    </div>
+
+                    <!-- Email Verification Code Form -->
+                    
+                    <!-- This code block contains a form for email verification during the signup process. It includes an input field for the verification code and a submit button. -->
+                    <div class="emailVerif-form" id="signup-evView" style="margin-top: 10%;">
+                        <form id="signup-evForm">
+                            <div class="form-floating my-5">
+                                <input type="text" class="form-control" id="signup-otp-code" placeholder="XXXXXX"
+                                    name="otp">
+                                <label for="signup-otp-code">Verification Code</label>
+                            </div>
+
+                            <div class="d-grid py-4" style="margin-bottom: 1px !important;">
+                                <button class="btn btn-warning orange-button" type="submit">Next</button>
+                            </div>
+                        </form>
+                    </div>
+
+                    <!-- Signup Information Entry Form -->
+                    
+                    <!--
+                    This is the HTML code for the sign-up form of the authentication page. 
+                    It contains a form with fields for the user to input their ID and password, and to confirm their password. 
+                    It also includes buttons for the user to sign up using their Google or Apple account, and a link to create a new account. 
+                    -->
+                    <div class="signup-form" id="signup-mainView">
+                        <form id="signup-mainForm">
+                            <div class="form-floating mb-4">
+                                <input type="text" class="form-control" id="signup-id" placeholder="username"
+                                style="border-top: none; border-left: none; border-right: none; border-bottom: 1px solid rgba(128, 128, 128, 0.5); border-radius: 0px;">
+                                <label for="signup-id" style="color: rgba(46, 46, 46, 0.5);">ID</label>
+                            </div>
+                            <div class="form-floating mb-3">
+                                <input type="password" class="form-control" id="signup-password" placeholder="Password"
+                                    name="password" style="border-top: none; border-left: none; border-right: none; border-bottom: 1px solid rgba(128, 128, 128, 0.5); border-radius: 0px;">
+                                <label for="signup-password" style="color: rgba(46, 46, 46, 0.5);">Password</label>
+                                <span id="passwordHelpInline" class="form-text">
+                                     Must be 8-20 characters long
+                                </span>
+                            </div>
+
+                            <div class="form-floating mb-3">
+                                <input type="password" class="form-control" id="signup-confirmpassword"
+                                    placeholder="Password" name="confirmPassword" style="border-top: none; border-left: none; border-right: none; border-bottom: 1px solid rgba(128, 128, 128, 0.5); border-radius: 0px;">
+                                <label for="signup-confirmpassword" style="color: rgba(46, 46, 46, 0.5);">Re-enter Password</label>
+                            </div>
+
+                            <div class="d-grid py-4 justify-content-end" style="padding: 50px 0px 30px 0px !important;">
+                                <button class="btn btn-warning orange-button" type="submit" id="route">Complete</button>
+                            </div>
+
+
+                            <div class="divider-container py-4">
+                                <div class="divider-line"></div>
+                                <div class="divider-text">OR</div>
+                                <div class="divider-line"></div>
+                            </div>
+
+                            <div class="d-grid gap-3 d-flex justify-content-center">
+                                <a class="btn btn-outline-primary auth-sso-btn" type="button"><img
+                                        src="../auth/images/icon-google.png" style="width:30px; height:30px;"
+                                        alt="Google"></a>
+                                <a class="btn btn-outline-primary auth-sso-btn" type="button"><img
+                                        src="../auth/images/icon-apple.png" style="width:30px; height:30px;"
+                                        alt="Apple"></a>
+                            </div>
+
+
+                            <div class="d-grid gap-3 d-flex justify-content-center pt-5" style="margin-bottom: 20%;">
+                                <p>Don't have an account? </p>
+                                <a class="createAcc" href="signup"
+                                    style="color:rgba(0, 0, 255, 0.8); text-decoration: none;">Create an
+                                    account</a>
+                            </div>
+
+                        </form>
+                    </div>
+
+
+                    <!-- Message Button -->
+                    <div class="message-btn" id="signup-msgBtnView">
+                        <div class="d-grid py-4 my-5">
+                            <a href="../auth/login" class="btn btn-warning orange-button">Complete</a>
+                        </div>
+                    </div>
+
+
+
+
+
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<script src="../auth/scripts/signup.js" defer="true"></script>
+
+{% endblock %}

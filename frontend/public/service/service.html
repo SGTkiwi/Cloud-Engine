@@ -1,0 +1,123 @@
+{% extends 'template/index.html' %}
+
+{% block content %}
+
+<style>
+    .serv-cell {
+        height: 100vh;
+
+        transition: transform 0.3s ease-in-out;
+        box-shadow: 0px 4px 8px rgba(59, 58, 58, 0.2);
+        border-radius: 20px;
+    }
+
+    .serv-cell:hover {
+
+        transform: scale(1.02);
+    }
+
+    .serv-cell a {
+        color: rgba(241, 241, 241, 0.853);
+        font-size: 2.5rem;
+        text-decoration: none;
+        transition: all 0.45s ease-in-out;
+        font-weight: 700;
+    }
+
+    .serv-cell a:hover {
+        color: #e9a530;
+        transform: scale(1.05);
+    }
+
+    .recom a:hover {
+        color: #e9a530;
+    }
+
+    .serv-solution-cell {
+        background-image: url('../service/images/solutions_bg.jpeg');
+        background-size: cover;
+        background-position: center;
+
+
+    }
+
+    .serv-solution-cell a {
+        text-decoration: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+
+
+    }
+
+    .serv-recomm-cell {
+        background-image: url('../service/images/recommendation_bg.jpeg');
+        background-size: cover;
+        background-position: center;
+    }
+
+    .serv-recomm-cell a {
+        text-decoration: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+    }
+
+
+    header a:hover {
+        color: rgb(255, 255, 255) !important;
+    }
+
+    button[type="exploreMore"] {
+        background: linear-gradient(to right, #303ce9d0, #f8c76d7a);
+        border: none;
+        border-radius: 5px;
+        padding: 0.75rem 1.5rem;
+        color: #fff;
+        font-size: 1.2rem;
+        font-weight: 700 !important;
+        margin-top: 2rem;
+    }
+</style>
+
+
+
+
+<!-- This code block represents a container with two service cells, one for recommendations and the other for solutions. Each service cell contains a link to a different page. -->
+<div class="container-fluid m-0">
+    <div class="row">
+        <div class="col-md-6 serv-cell recom serv-recomm-cell">
+            <a href="/selection">
+                <span class="serv-text">
+                    Recommendations
+                </span>
+            </a>
+        </div>
+
+        <div class="col-md-6 serv-cell serv-solution-cell">
+            <a href="/solution">
+                <span class="serv-text">
+                    Solutions
+                </span>
+            </a>
+        </div>
+    </div>
+</div>
+
+
+<!-- This script adds event listener to the document object and sets the visibility of two chat boxes with ids "helpContactBtn" and "helpContactBtnToGPT" to "visible" once the DOM content is loaded. -->
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        var chatBox = document.getElementById("helpContactBtn");
+        chatBox.style.visibility = "visible";
+
+        var chatBoxToGPT = document.getElementById("helpContactBtnToGPT");
+        chatBoxToGPT.style.visibility = "visible";
+    });
+</script>
+
+{% endblock %}
